@@ -1,0 +1,228 @@
+html{
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+}
+#indexTopHeader{
+    display: flex;
+    background-color: #0b022cee;
+    height: 150px;
+}
+#indexHeader{
+ background-color:#0b022cee;
+ height: 150px;
+}
+#indexMain{
+    display:flex;
+}
+#cards{
+    display: flex;
+    margin-top: 3%;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 25%;
+}
+#cardImage{
+    border: solid 1px;
+}
+#card1{
+   display: block;
+}
+#navLinks{
+    display: block;
+    margin-top: 30px;
+}
+#indexTopHeader #navLinks{
+    padding-left: 49%;
+}
+#navLink{
+    display: flex;
+}
+#navLinks ul{
+    list-style-type: none;
+}
+#navLink li a{
+    padding:1em;
+    margin-top: 30px;
+   text-decoration:none;
+   color: white;
+}
+#smText{
+    padding:1em;
+   text-decoration:none;
+   color:#30af61;
+   float: right;
+}
+#logo{
+    margin-top: 30px;
+    margin-left:10px;
+   font-size: 30px;
+   color:white;
+}
+#descTitle{
+    color:#30af61;
+    font-size: 25px;
+    text-align: center;
+}
+#descTitle2{
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+#descTitle2 #buttton{
+    color: white;
+    background-color: #0b022cee;
+    padding: 1em;
+    width: fit-content;
+    justify-content: center;
+    border: 1px white;
+}
+#footer{
+    background-color:#0b022cee;
+    color: white;
+    display: flex;
+    height: 200px;
+}
+#footerLeft ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 54.5em;
+}
+#footerLeft ul li a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-left:  1em;
+}
+#copyRight{
+    color:#30af61;
+    padding-top: 1em;
+    margin-left:10px;
+}
+#footerLeft{
+    display: flex;
+}
+#footerLinks{
+    display: flex;
+}
+
+/* register */
+
+#descTitleSpeaker{
+    color:#30af61;
+    font-size: 25px;
+    text-align: center;
+}
+#descTitle2Speacker{
+    text-align: center;
+    font-size: 12px;
+    color: #36412e;
+}
+#indexHeaderSpeaker{
+    background-image: linear-gradient(to left,#e8ebbe, #d6ffd6)
+}
+#indexMainSpeaker{
+    display: flex;
+    margin-top: 3%;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 25%;
+}
+#rightSide img{
+    margin-left: 26%;
+    border-radius: 100% 100% 100% 100%;
+}
+#rightSides img{
+    border-radius: 10px 10px 10px 10px;
+}
+#leftSide{
+    width:500px;
+}
+#leftSidess{
+    width:200px;
+}
+#minTitles{
+    width:500px;
+    text-align: justify;
+    font-size: 12px;
+    color:#5c5f5d;
+}
+#cover{
+    width: 200px;
+    margin-top: -65px;
+    height: 100px;
+    border-radius: 7px 7px 7px 7px;
+    border: 1px #c2c9c3 solid ;
+}
+#names{
+    color: #5c5f5d;
+    line-height: 150px;
+    padding-bottom: 10px;
+    margin-left: 41%;
+    font-size: 12px;
+    justify-content: center;
+    display: block;
+}
+#website{
+    margin-top: -135px;
+    margin-left:-25px;
+    color:#5c5f5d;
+}
+#minTitle{
+    width:500px;
+    text-align: justify;
+    font-size: 12px;
+    color:#5c5f5d;
+}
+#titles{
+    color:#346949;
+}
+#scheduleRight{
+    width: 150px;
+    
+}
+#scheduleRight #work{
+    font-size: 20px;
+}
+#scheduleLeft{
+   
+}
+#times{
+    display: flex;
+    width: 500px;
+    color: #5c5f5d;
+    border-top: 1px #5c5f5d solid;
+    border-bottom: 1px solid;
+}
+#timePart1{
+    width: 50%;
+    font-size: 15px;
+}
+#bodyTable{
+    width: 40%;
+    font-size: 12px;
+}
+#btnSave{
+    color: white;
+    background-color: #0b022cee;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: fit-content;
+    justify-content: center;
+    border: 1px white;
+    border-radius: 5px 5px 5px 5px;
+}
+#registerForm{
+    color: #0b022cee;
+}
+#registerForm input,textarea,select{
+    border:1px solid #a8a8a8;
+    padding-left: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px 2px 2px 2px;
+}
