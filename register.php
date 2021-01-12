@@ -1,3 +1,7 @@
+<?php
+
+    include("connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +26,7 @@
                 <li><a href="">Speakers</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="venue.html">Venue</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="register.php">Register</a></li>
             </ul>
         </div>
     </div>
@@ -63,21 +67,26 @@
             </div>&nbsp; &nbsp; &nbsp;
             <div id="rightSide">
                 <div id="formLegend">
-                    <form action="" id="registerForm">
+                    <form method="POST" id="registerForm">
                         <label for="" id="labels">Name</label><br>
-                        <input type="text" placeholder="Full Names"><br><br>
+                        <input type="text" name="names" placeholder="Full Names"><br><br>
                         <label for="">Email</label><br>
-                        <input type="text" name="" placeholder="Email Address" id=""><br><br>
+                        <input type="text" name="emails" placeholder="Email Address" id=""><br><br>
                         <label for="">Number of Passes</label><br>
-                        <select name="" id="">
-                            <option value="">&nbsp; 1 &nbsp;</option>
-                            <option value="">&nbsp; 2 &nbsp;</option>
-                            <option value="">&nbsp; 3 &nbsp;</option>
+                        <select name="nAttend" id="">
+                            <?php
+                                $i = 1;
+                                for ($i=1; $i<=10; $i++) { 
+                                    ?>
+                                    <option value="<?= $i;?>"><?= $i;?></option>
+                                    <?php
+                                }
+                            ?>
                         </select>
                         <br><br>
                         <label for="">Comments</label> <br>
-                        <textarea name="" placeholder="" id="" cols="22" rows="4"></textarea><br><br>
-                        <button style="background-color: #013f27;" id="btnSave">PURCHASE</button>
+                        <textarea name="comment" placeholder="" id="" cols="22" rows="4"></textarea><br><br>
+                        <input type="submit" name="purchasing" style="background-color: #013f27;" value="PURCHASE" id="btnSave">
                     </form>
                 </div>
             </div>
@@ -100,3 +109,18 @@
     </div>
 </body>
 </html>
+<?php
+    if (isset($_POST['purchasing'])) {
+        $a = mysqli_real_escape_string($conn,$_POST['names']);
+        $b = mysqli_real_escape_string($conn,$_POST['emails']);
+        $c = mysqli_real_escape_string($conn,$_POST['nAttend']);
+        $d = mysqli_real_escape_string($conn,$_POST['comment']);
+        
+        $save = mysqli_query($conn,"INSERT INTO attenders (id,names,email,nbrOfPasses,comments) VALUES ('','$a','$b','$c','$d')") or die(mysqli_error($conn));
+        if ($save) {
+            echo "<script>alert('Purchased successfully');</script>";
+        }else{
+            echo "<script>alert('Purchased not done');</script>";
+        }
+    }
+?>
